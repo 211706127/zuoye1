@@ -351,6 +351,8 @@ def shuru(a):
     z9=len(a)
     z10=0
     z11=''
+    qwe=1
+    asd=1
     global zz
     for i in range(0,z9):
         z9=len(a)
@@ -387,9 +389,11 @@ def shuru(a):
     elif a[0]=='如果':
         for i in range(len(b)):
             if b[i]==a[1]:
-                for j in range(len(b)):
-                    if b[j]==a[3]:
-                        z7=1
+                qwe=0
+        if qwe==0:
+            for j in range(len(b)):
+                if b[j]==a[3]:
+                    z7=1
                 if z7==0:
                     z8=a[3]
                 else:
@@ -412,6 +416,8 @@ def shuru(a):
                             break       
                     if z4==1:
                         shuru(a[x+1:])
+        else:
+            print(a[1]+'不存在')
     elif a[0]=='无':
         z5+=1
     else:
@@ -426,7 +432,11 @@ def shuru(a):
             z11=a[2]
         for i in range(len(b)):
             if b[i]==a[0]:
-                c[i]=bian2(str(int(jisuan(a[1],int(bian(c[i])),int(bian(z11))))))
+                asd=0
+        if asd==0:
+            c[i]=bian2(str(int(jisuan(a[1],int(bian(c[i])),int(bian(z11))))))
+        else:
+            print(a[0]+'不存在')
 b=[]
 c=[]
 a=(input().split(' '))
